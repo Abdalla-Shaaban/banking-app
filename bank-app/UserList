@@ -1,0 +1,5 @@
+testuser:pass:file:write:customer
+nextuser:pass:file:write:customer
+lastuser:1234:john:doe:customer
+userone:pass:mike:stan:customer
+usertwo:pass:jane:larry:customer
