@@ -21,7 +21,7 @@ public class DomParser implements Runnable{
 		MonitorDir newFile = new MonitorDir();
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Ninjas8741");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "XXXXX");
 			System.out.println("Connected to " + con.getSchema());
 			Statement st = con.createStatement();
 			String path = ("C:\\Java\\bank-accounts\\" + newFile.getPath());
