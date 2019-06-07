@@ -1,6 +1,6 @@
 package com.springboot.batch;
 
-import com.springboot.parsexml.DomParser;
+import com.springboot.parser.DomParser;
 import com.springboot.watchservice.MonitorDir;
 
 public class BatchAccounts {
