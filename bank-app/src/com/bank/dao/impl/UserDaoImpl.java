@@ -60,7 +60,7 @@ public class UserDaoImpl implements UserDao {
 		try {
 			// using database persistence
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Ninjas8741");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "XXXX");
 			// System.out.println("Connected to " + con.getSchema());
 			Statement st = con.createStatement();
 			st.executeUpdate("INSERT INTO users " + " VALUES ('" + user.getUsername() + "','" + user.getPassword()
