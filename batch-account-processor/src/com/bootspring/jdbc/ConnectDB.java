@@ -10,7 +10,7 @@ public class ConnectDB {
 	public void insertToTable(String accID, String accNum, String accType) {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
-			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "XXXX");
+			Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "system", "Ninjas8741");
 			Statement st = con.createStatement();
 			st.executeUpdate("INSERT INTO account " + "VALUES (ACCOUNT_SEQ.nextval,'"
 					+ accID + "','"

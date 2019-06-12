@@ -13,6 +13,8 @@ import java.nio.file.WatchEvent;
 import java.nio.file.WatchEvent.Kind;
 import java.nio.file.WatchKey;
 import java.nio.file.WatchService;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import com.springboot.parser.DomParser;
 
@@ -65,8 +67,18 @@ public class BatchAccounts {
 						Path newPath = ((WatchEvent<Path>) watchEvent).context();
 						// Output
 						System.out.println("New path created: " + newPath);
-						Runnable r = new DomParser(newPath);
-						new Thread(r).start();
+						Runnable r1 = new DomParser(newPath);
+						Runnable r2 = new DomParser(newPath);
+						Runnable r3 = new DomParser(newPath);
+						Runnable r4 = new DomParser(newPath);
+						Runnable r5 = new DomParser(newPath);
+						ExecutorService pool = Executors.newFixedThreadPool(3);   
+						pool.execute(r1);
+						pool.execute(r2);
+						pool.execute(r3);
+						pool.execute(r4);
+						pool.execute(r5);
+						pool.shutdown();  
 					}
 				}
 
