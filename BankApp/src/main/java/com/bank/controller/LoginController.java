@@ -14,15 +14,6 @@ import com.bank.dao.impl.UserDaoImpl;
 @SessionAttributes("username")
 public class LoginController {
 
-	public boolean authenticate(User user) {
-		UserDaoImpl auth = new UserDaoImpl();
-		auth.authenticate(user);
-		if (user.isLoginStatus()) {
-			return true;
-		} else {
-			return false;
-		}
-	}
     @RequestMapping(value="/index", method = RequestMethod.GET)
     public String showLoginPage(ModelMap model){
         return "index";
